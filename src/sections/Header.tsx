@@ -3,6 +3,7 @@ import Logo from "@/assets/logosaas.png";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 
+
 export const Header = () => {
   return (
     <header className="sticky top-0 backdrop-blur-sm z-20">

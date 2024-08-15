@@ -12,4 +12,5 @@
   .btn-text {
     @apply text-black bg-transparent;
   }
+
 }
