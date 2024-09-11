@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   description: "Template created by Frontend Tribe",
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
