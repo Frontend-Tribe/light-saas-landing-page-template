@@ -7,6 +7,7 @@ import avatar6 from "@/assets/avatar-6.png";
 import avatar7 from "@/assets/avatar-7.png";
 import avatar8 from "@/assets/avatar-8.png";
 import avatar9 from "@/assets/avatar-9.png";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -66,5 +67,54 @@ const testimonials = [
 ];
 
 export const Testimonials = () => {
-  return null;
+  return (
+    <section className="bg-white">
+      <div className="container">
+        <div className="flex flex-col">
+          <div className="tag mb-3 mx-auto">Testimonials</div>
+          <h2 className="text-4xl md:text-6xl font-bold text-center bg-gradient-to-b from-black to-blue-800 text-transparent bg-clip-text mb-6">
+            What our users say
+          </h2>
+          <p className="text-xl md:text-2xl font-bold text-center mb-6 max-w-md mx-auto">
+            From intuitive design to powerful features, our app has become an
+            essential tool for users around the world
+          </p>
+        </div>
+
+        <div
+          className={`grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 lg:grid-cols-3 items-start`}
+        >
+          {testimonials.map((testimonial, index) => {
+            return (
+              <div
+                key={index}
+                className="rounded-lg py-10 px-5 shadow-md shadow-zinc-400/20 mb-10"
+              >
+                <div className="flex items-center gap-3 justify-center mb-4">
+                  <Image
+                    src={testimonial.imageSrc}
+                    alt="profile img"
+                    width={50}
+                    height={50}
+                  />
+                  <div className="flex flex-col">
+                    <span className="font-bold text-xl">
+                      {testimonial.name}
+                    </span>
+                    <span className="text-zinc-700">
+                      {testimonial.username}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="text-md text-black px-10 text-center">
+                  {testimonial.text}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
 };

@@ -1,4 +1,5 @@
 import CheckIcon from "@/assets/check.svg";
+import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 const pricingTiers = [
   {
@@ -54,13 +55,13 @@ const pricingTiers = [
 
 export const Pricing = () => {
   return (
-    <section className=" py-24">
+    <section className="py-24 bg-white">
       <div className="container">
         <div className="mb-10">
           <h2 className="text-4xl font-bold text-center mb-6 tracking-tight bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text">
             Pricing
           </h2>
-          <p className="text-center max-w-sm mx-auto text-2xl md:max-w-lg font-light">
+          <p className="text-center mx-auto text-2xl md:max-w-lg font-light">
             Free forever. Upgrade for unlimited tasks, better security, and
             exclusive features.
           </p>
